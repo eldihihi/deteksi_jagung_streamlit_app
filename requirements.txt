@@ -1,6 +1,6 @@
 streamlit
-tensorflow==2.8.0
-protobuf==3.20.0
+tensorflow==2.11.0 # <--- PERUBAHAN DI SINI
+protobuf==3.20.3 # <--- PERUBAHAN DI SINI
 gdown
-numpy==1.23.5  # <--- TAMBAHKAN/UBAH BARIS INI
+numpy==1.23.5
 Pillow
