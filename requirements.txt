@@ -1,6 +1,5 @@
 streamlit
-tensorflow==2.11.0
-protobuf==3.19.6 # <--- PERUBAHAN DI SINI (dari 3.20.3 ke 3.19.6)
+tensorflow==2.18.0 # <--- UBAH KE VERSI INI!
+protobuf>=4.23.0,<5.0.0 # <--- Sesuaikan protobuf untuk TF 2.18.0
 gdown
-numpy==1.23.5
 Pillow
