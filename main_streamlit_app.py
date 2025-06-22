@@ -33,10 +33,11 @@ MODEL_FILENAMES = {
 }
 
 # Ukuran gambar input yang dibutuhkan oleh setiap model
+# Input image sizes required by each model
 IMAGE_TARGET_SIZES = {
     "resnet": (224, 224),
     "vgg": (224, 224),
-    "inception": (299, 299) # InceptionV3 biasanya membutuhkan 299x299
+    "inception": (224, 224) # <--- PERUBAHAN DI SINI! (dari 299,299 ke 224,224)
 }
 
 # Nama kelas untuk hasil prediksi
