@@ -71,7 +71,7 @@ def preprocess_image_for_model(image_path, model_name):
 # --- Pemuatan Model dengan Caching Streamlit ---
 # @st.cache_resource sangat penting di sini: memastikan model diunduh dan dimuat
 # hanya sekali di seluruh sesi pengguna, mencegah operasi berat berulang.
-@st.cache_resource(show_spinner=False) # show_spinner=False untuk menggunakan pesan kustom di bawah
+@st.cache_resource(show_spinner=False, hash_funcs={"_thread.RLock": lambda _: None}) # show_spinner=False untuk menggunakan pesan kustom di bawah
 def load_all_models_cached():
     """
     Mengunduh dan memuat semua model ensemble. Fungsi ini di-cache oleh Streamlit.
@@ -174,6 +174,7 @@ if uploaded_file is not None:
         for model_name, model in ensemble_models.items():
             # Pra-proses gambar menggunakan fungsi pembantu
             processed_image = preprocess_image_for_model(temp_image_path, model_name)
+            st.write(f"DEBUG: Memproses {model_name} dengan shape: {processed_image.shape}") # Tambahkan ini untuk debugging
             
             # Prediksi dengan model saat ini
             pred = model.predict(processed_image)
