@@ -1,0 +1,6 @@
+streamlit
+tensorflow==2.8.0
+protobuf==3.20.3
+gdown
+numpy
+Pillow
