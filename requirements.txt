@@ -1,6 +1,6 @@
 streamlit
 tensorflow==2.8.0
-protobuf==3.20.3
+protobuf==3.20.0
 gdown
-numpy
+numpy==1.23.5  # <--- TAMBAHKAN/UBAH BARIS INI
 Pillow
